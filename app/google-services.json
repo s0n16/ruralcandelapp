@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "457198410304",
+    "project_id": "ruralcandelappf",
+    "storage_bucket": "ruralcandelappf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457198410304:android:03eb019a64092926c7dda5",
+        "android_client_info": {
+          "package_name": "com.example.ruralcandelappf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457198410304-mjjsmfqk1jafvi0ecgtau5bndtj41h2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC-MUyXrjsk-KP39gqKqc_C72zG1A_FO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457198410304-mjjsmfqk1jafvi0ecgtau5bndtj41h2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

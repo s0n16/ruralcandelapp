@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ReservarRestaurante"
+    android:background="@drawable/restauranteblanconegro"
+
+    >
+
+    <View
+        android:id="@+id/rectangulo"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:background="@color/verde_oliva_transparente"
+        />
+
+    <TextView
+        android:id="@+id/tvSeleccionaFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la fecha:"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="150dp"
+        />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvSeleccionaFecha"
+        android:layout_alignTop="@id/tvSeleccionaFecha"
+        android:layout_marginStart="20dp"
+        android:background="@color/black"
+        />
+
+
+    <Button
+        android:id="@+id/btnAbrirCalendario"
+        android:layout_below="@+id/etFecha"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:text="Abrir calendario"
+        android:background="@color/black"
+
+        />
+    <TextView
+        android:id="@+id/tvSeleccionaHora"
+        android:layout_below="@+id/btnAbrirCalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la hora:"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <Spinner
+        android:id="@+id/spnComidaCena"
+        android:layout_below="@+id/tvSeleccionaHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20sp"
+        android:dropDownWidth="200dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvPax"
+        android:layout_below="@+id/spnComidaCena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Cuántas personas?"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        />
+
+
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_below="@+id/tvPax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/btnReservar"
+        android:layout_below="@+id/numberPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/black"
+        android:text="Reservar" />
+
+
+
+</RelativeLayout>

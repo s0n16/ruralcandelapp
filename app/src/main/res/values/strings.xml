@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ruralcandelappf</string>
+    <string-array name="horas">
+        <item>Despliega para seleccionar la hora</item>
+        <item>14:00</item>
+        <item>15:30</item>
+        <item>20:30</item>
+        <item>22:00</item>
+    </string-array>
+
+
+
+    <string-array name="modificarCuenta">
+        <item>¿Qué dato quieres actualizar?</item>
+        <item>Contraseña</item>
+        <item>Telefono</item>
+        <item>Email</item>
+        <item>País</item>
+        <item>Ciudad</item>
+    </string-array>
+</resources>

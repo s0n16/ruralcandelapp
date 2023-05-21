@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OvalButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/oval_button_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+</resources>

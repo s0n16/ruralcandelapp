@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/madera5"
+
+    tools:context=".ReservarApartamentos">
+
+    <View
+        android:id="@+id/rectangulo"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/negro_oscuro_transparente"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tvFechaEntrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrada:"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/etFechaEntrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_alignTop="@id/tvFechaEntrada"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:editable="false"
+        />
+
+
+    <TextView
+        android:id="@+id/tvFechaSalida"
+        android:layout_below="@+id/tvFechaEntrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salida:"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="16dp"
+
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/etFechaSalida"
+        android:layout_toEndOf="@id/tvFechaSalida"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvFechaSalida"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/white"
+        android:editable="false"
+        />
+
+    <Button
+        android:id="@+id/btnAbrirCalendario"
+        android:layout_below="@+id/etFechaSalida"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="16dp"
+        android:text="Fecha de entrada"
+        android:background="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnAbrirCalendario2"
+        android:layout_below="@+id/etFechaSalida"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="46dp"
+        android:text="Fecha de salida"
+        android:background="@color/black"
+        />
+
+
+    <Switch
+        android:id="@+id/switchSupletoria"
+        android:layout_below="@+id/btnAbrirCalendario"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir cama supletoria"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="16dp"
+        android:thumbTint="@color/verde_claro"
+        android:trackTint="@color/verde_claro"
+        android:checked="false"/>
+
+    <Switch
+        android:id="@+id/switchCuna"
+        android:layout_below="@+id/switchSupletoria"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir cuna"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="16dp"
+        android:thumbTint="@color/verde_claro"
+        android:trackTint="@color/verde_claro"
+        android:checked="false" />
+
+
+
+    <TextView
+        android:id="@+id/tvMascotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Vienes con mascota?"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/switchCuna"
+        android:layout_marginTop="50dp"
+
+        />
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/tvMascotas"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:max="3"
+        android:min="0" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnReservar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="Reservar"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+

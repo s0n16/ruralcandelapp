@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cuenta"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnAjustes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Ajustar cuenta"
+        />
+
+    <Button
+        android:id="@+id/btnDarDeBaja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAjustes"
+        android:layout_marginTop="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Dame de baja"
+        />
+
+    <Spinner
+        android:id="@+id/spnModificar"
+        android:layout_below="@+id/btnDarDeBaja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:entries="@array/modificarCuenta"
+        />
+
+    <EditText
+        android:id="@+id/txtJocker"
+        android:layout_below="@+id/spnModificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Introduce la nueva contraseña"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/txtContrasena2"
+        android:layout_below="@+id/txtJocker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Confirma la nueva contraseña"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnCambiarContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtContrasena2"
+        android:layout_marginTop="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Cambiar contraseña"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnCambiarTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJocker"
+        android:layout_marginTop="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Actualizar teléfono"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnCambiarEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJocker"
+        android:layout_marginTop="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Actualizar Email"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnCambiarPais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJocker"
+        android:layout_marginTop="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Actualizar país"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnCambiarCiudad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJocker"
+        android:layout_marginTop="50dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_oliva"
+        android:text="Actualizar ciudad"
+        android:visibility="invisible"
+        />
+
+</LinearLayout>
