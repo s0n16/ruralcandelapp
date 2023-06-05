@@ -24,7 +24,7 @@
             android:id="@+id/btnReservar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/verde_oliva"
+            android:background="@drawable/btn_color_inicio"
             android:text="Reservar"/>
 
 

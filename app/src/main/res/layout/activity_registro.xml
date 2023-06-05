@@ -119,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="@color/verde_oliva"
+            android:background="@drawable/btn_color"
             android:text="Registrarse"
             android:padding="10dp"
             />

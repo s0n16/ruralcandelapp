@@ -219,6 +219,9 @@ public class ReservarApartamentos extends AppCompatActivity {
 
                                 // Redirige a la pantalla de inicio
                                 Intent intent = new Intent(ReservarApartamentos.this, Inicio.class);
+                                intent.putExtra("nombre", nombre);
+                                intent.putExtra("apellido1", apellido1);
+                                intent.putExtra("telefono", telefono);
                                 startActivity(intent);
                             }
                         })
@@ -228,21 +231,13 @@ public class ReservarApartamentos extends AppCompatActivity {
                             }
                         });
 
+
                 // Muestra el diálogo de alerta
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                builder.show();
 
 
 
 
-
-                // Vuelve a la pantalla de inicio
-                Intent intent = new Intent(ReservarApartamentos.this, Inicio.class);
-                //pasando los datos del usuario
-                intent.putExtra("nombre", nombre);
-                intent.putExtra("apellido1", apellido1);
-                intent.putExtra("telefono", telefono);
-                startActivity(intent);
             }
         });
     }

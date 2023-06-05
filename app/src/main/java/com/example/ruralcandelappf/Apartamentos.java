@@ -16,7 +16,7 @@ import com.example.ruralcandelappf.adaptadores.ImagePagerAdapter;
 
 public class Apartamentos extends AppCompatActivity {
 
-    private int[] imageIds = { R.drawable.buleriacama3,R.drawable.alegriapuertapersiana, R.drawable.alegriacama1, R.drawable.soleaestudio, R.drawable.alegriacocina, R.drawable.fandangobano, R.drawable.piscina };
+    private int[] imageIds = { R.drawable.buleriacama3,R.drawable.alegriapuertapersiana, R.drawable.alegriacama1, R.drawable.soleaestudio, R.drawable.alegriacocina, R.drawable.fandangobano, R.drawable.piscina, R.drawable.entrada  };
     public String nombre;
     public String apellido1;
     public String telefono;

@@ -11,7 +11,7 @@
     <View
         android:id="@+id/rectangulo"
         android:layout_width="350dp"
-        android:layout_height="600dp"
+        android:layout_height="650dp"
         android:layout_centerHorizontal="true"
         android:background="@color/negro_oscuro_transparente"
         android:layout_marginTop="30dp"
@@ -28,6 +28,7 @@
         android:layout_marginStart="55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="50dp"
+        android:textStyle="bold"
         />
 
     <EditText
@@ -83,7 +84,8 @@
         android:layout_marginStart="46dp"
         android:layout_marginEnd="16dp"
         android:text="Fecha de entrada"
-        android:background="@color/black"
+        android:padding="8dp"
+        android:background="@drawable/btn_sin_borde"
         />
 
     <Button
@@ -96,7 +98,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="46dp"
         android:text="Fecha de salida"
-        android:background="@color/black"
+        android:padding="8dp"
+        android:background="@drawable/btn_sin_borde"
         />
 
 
@@ -148,6 +151,7 @@
         />
 
 
+
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_below="@+id/tvMascotas"
@@ -158,6 +162,21 @@
         android:layout_marginEnd="55dp"
         android:max="3"
         android:min="0" />
+
+    <TextView
+        android:id="@+id/tvNumMascotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0               1                2              3"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="30dp"
+
+        />
 
 
 
@@ -173,7 +192,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="16dp"
             android:text="Reservar"
-            android:background="@color/black"
+            android:background="@drawable/btn_sin_borde"
             android:textColor="@color/white"
             android:textSize="30sp" />
 

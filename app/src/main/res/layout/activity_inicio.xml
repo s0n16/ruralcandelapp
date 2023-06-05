@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="fonts/adelia.ttf"
             android:text="Restaurante"
+            android:background="@drawable/btn_color_inicio"
             />
 
         <ImageView
@@ -56,6 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Apartamentos"
+            android:background="@drawable/btn_color_inicio"
             />
 
         <ImageView
@@ -70,13 +72,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reseñas"
+            android:background="@drawable/btn_color_inicio"
             />
 
         <ImageView
             android:id="@+id/imgContacto"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/apartamentos5"
             />
 
         <Button
@@ -84,13 +87,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contacto"
+            android:background="@drawable/btn_color_inicio"
             />
 
         <ImageView
             android:id="@+id/imgCuenta"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/jarron"
             />
 
         <Button
@@ -98,6 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cuenta"
+            android:background="@drawable/btn_color_inicio"
             />
 
     </LinearLayout>

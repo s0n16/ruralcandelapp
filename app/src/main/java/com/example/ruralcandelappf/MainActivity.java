@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         Button btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
         Button btnRegistrarse = findViewById(R.id.btnRegistrarse);
         Button btnSinSesion = findViewById(R.id.btnSinSesion);
+
+        txtContrasena.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+        txtEmail.setText("");
+        txtContrasena.setText("");
 
 
 

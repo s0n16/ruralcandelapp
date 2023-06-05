@@ -6,24 +6,20 @@
     android:padding="16dp"
     tools:context="com.example.ruralcandelappf.Resenas"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@drawable/pluma2">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="2"
+        android:background="@color/white"
 
         />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp"
-        android:id="@+id/resena"
-        >
+
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -78,11 +74,12 @@
 
         <Button
             android:id="@+id/btnDejarResena"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="Dejar reseña"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom= "50dp"
+            android:background="@drawable/btn_sin_borde"
             />
 
 
@@ -94,4 +91,3 @@
 
 
 
-</LinearLayout>

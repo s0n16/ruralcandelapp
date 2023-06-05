@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
-        android:text="Ajustar cuenta"
+        android:text="Modificar cuenta"
+        android:background="@drawable/btn_color"
         />
 
     <Button
@@ -23,8 +23,8 @@
         android:layout_below="@+id/btnAjustes"
         android:layout_marginTop="50dp"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
         android:text="Dame de baja"
+        android:background="@drawable/btn_color"
         />
 
     <Spinner
@@ -67,9 +67,9 @@
         android:layout_below="@+id/txtContrasena2"
         android:layout_marginTop="50dp"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
         android:text="Cambiar contraseña"
         android:visibility="invisible"
+        android:background="@drawable/btn_color"
         />
 
     <Button
@@ -79,9 +79,9 @@
         android:layout_below="@+id/txtJocker"
         android:layout_marginTop="50dp"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
         android:text="Actualizar teléfono"
         android:visibility="invisible"
+        android:background="@drawable/btn_color"
         />
 
     <Button
@@ -91,9 +91,9 @@
         android:layout_below="@+id/txtJocker"
         android:layout_marginTop="50dp"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
         android:text="Actualizar Email"
         android:visibility="invisible"
+        android:background="@drawable/btn_color"
         />
 
     <Button
@@ -103,9 +103,9 @@
         android:layout_below="@+id/txtJocker"
         android:layout_marginTop="50dp"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
         android:text="Actualizar país"
         android:visibility="invisible"
+        android:background="@drawable/btn_color"
         />
 
     <Button
@@ -115,9 +115,9 @@
         android:layout_below="@+id/txtJocker"
         android:layout_marginTop="50dp"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/verde_oliva"
         android:text="Actualizar ciudad"
         android:visibility="invisible"
+        android:background="@drawable/btn_color"
         />
 
 </LinearLayout>

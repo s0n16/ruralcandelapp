@@ -4,19 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".ReservarRestaurante"
-    android:background="@drawable/restauranteblanconegro"
+    android:background="@drawable/pizarra3"
 
     >
 
-    <View
-        android:id="@+id/rectangulo"
-        android:layout_width="300dp"
-        android:layout_height="500dp"
-        android:layout_centerInParent="true"
-        android:background="@color/verde_oliva_transparente"
-        />
+
 
     <TextView
         android:id="@+id/tvSeleccionaFecha"
@@ -27,7 +21,7 @@
         android:textColor="@color/white"
         android:layout_centerVertical="false"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         />
 
     <EditText
@@ -45,12 +39,11 @@
         android:id="@+id/btnAbrirCalendario"
         android:layout_below="@+id/etFecha"
         android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-
         android:layout_centerHorizontal="true"
-        android:text="Abrir calendario"
-        android:background="@color/black"
+        android:text="Calendario"
+        android:background="@drawable/btn_color"
 
         />
     <TextView
@@ -63,7 +56,7 @@
         android:textColor="@color/white"
         android:layout_centerVertical="false"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="80dp"
         />
 
     <Spinner
@@ -90,7 +83,7 @@
         android:textColor="@color/white"
         android:layout_centerVertical="false"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         />
 
 
@@ -109,12 +102,11 @@
         android:layout_below="@+id/numberPicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/black"
+        android:background="@drawable/btn_color"
         android:text="Reservar" />
 
 

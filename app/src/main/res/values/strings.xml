@@ -9,7 +9,6 @@
     </string-array>
 
 
-
     <string-array name="modificarCuenta">
         <item>¿Qué dato quieres actualizar?</item>
         <item>Contraseña</item>

@@ -10,6 +10,12 @@
     <color name="gris_claro">#D3D3D3</color>
     <color name="gris_medio">#808080</color>
     <color name="gris_oscuro">#303030</color>
+    <color name="gris">#A9A9A9</color>
+    <color name="gris_azulado">#778899</color>
+    <color name="gris_acero">#646464</color>
+    <color name="gris_pizarra">#708090</color>
+    <color name="gris_plata">#C0C0C0</color>
+
     <color name="verde_oscuro">#008000</color>
     <color name="verde_medio">#00FF00</color>
     <color name="verde_claro">#7FFF00</color>
@@ -48,6 +54,7 @@
     <color name="vino7">#800000</color>
     <color name="verde_oliva_transparente">#801D2022</color>
     <color name="negro_oscuro_transparente">#80000000</color>
+
 
 
 

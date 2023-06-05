@@ -177,6 +177,9 @@ public class ReservarRestaurante extends AppCompatActivity {
 
                                     // Redirige a la pantalla de inicio
                                     Intent intent = new Intent(ReservarRestaurante.this, Inicio.class);
+                                    intent.putExtra("nombre", nombre);
+                                    intent.putExtra("apellido1", apellido1);
+                                    intent.putExtra("telefono", telefono);
                                     startActivity(intent);
                                 }
                             })

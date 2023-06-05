@@ -84,6 +84,7 @@ public class Cuenta extends AppCompatActivity {
                 switch(position) {
 
                     case 0:
+                        txtJocker.setText("");
                         btnCambiarCiudad.setVisibility(View.GONE);
                         btnCambiarPais.setVisibility(View.GONE);
                         btnCambiarEmail.setVisibility(View.GONE);
@@ -96,6 +97,7 @@ public class Cuenta extends AppCompatActivity {
                         break;
                     case 1:
                         // Código para contraseña
+                        txtJocker.setText("");
                         txtJocker.setVisibility(View.VISIBLE);
                         txtJocker.setHint("Introduce la nueva contraseña");
                         txtContrasena2.setVisibility(View.VISIBLE);
@@ -162,11 +164,11 @@ public class Cuenta extends AppCompatActivity {
 
 
 
-                                        }Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                                        }else{Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();}
 
 
 
-                                    }Toast.makeText(getApplicationContext(), "Las contraseña debe tener al menos 8 dígitos, una mayúscula, una minúscula, un número y un caracter especial", Toast.LENGTH_SHORT).show();
+                                    }else{Toast.makeText(getApplicationContext(), "Las contraseña debe tener al menos 8 dígitos, una mayúscula, una minúscula, un número y un caracter especial", Toast.LENGTH_SHORT).show();}
 
 
 
@@ -178,6 +180,7 @@ public class Cuenta extends AppCompatActivity {
                         break;
                     case 2:
                         // Código para teléfono
+                        txtJocker.setText("");
                         txtJocker.setVisibility(View.VISIBLE);
                         txtJocker.setHint("Introduce el nuevo teléfono");
                         btnCambiarTelefono.setVisibility(View.VISIBLE);
@@ -208,12 +211,12 @@ public class Cuenta extends AppCompatActivity {
                                                         ref.child("usuarios").child(userID).child("telefono").setValue(txtJocker.getText().toString()).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                             @Override
                                                             public void onSuccess(Void aVoid) {
-                                                                Toast.makeText(getApplicationContext(), "Contraseña cambiada correctamente", Toast.LENGTH_SHORT).show();
+                                                                Toast.makeText(getApplicationContext(), "Teléfono cambiado correctamente", Toast.LENGTH_SHORT).show();
                                                             }
                                                         }).addOnFailureListener(new OnFailureListener() {
                                                             @Override
                                                             public void onFailure(@NonNull Exception e) {
-                                                                Toast.makeText(getApplicationContext(), "Error al cambiar la contraseña", Toast.LENGTH_SHORT).show();
+                                                                Toast.makeText(getApplicationContext(), "Error al cambiar el teléfono", Toast.LENGTH_SHORT).show();
                                                             }
                                                         });
                                                     }
@@ -238,6 +241,7 @@ public class Cuenta extends AppCompatActivity {
                         break;
                     case 3:
                         // Código para Email
+                        txtJocker.setText("");
                         txtJocker.setVisibility(View.VISIBLE);
                         txtJocker.setHint("Introduce el nuevo Email");
                         btnCambiarEmail.setVisibility(View.VISIBLE);
@@ -246,9 +250,56 @@ public class Cuenta extends AppCompatActivity {
                         btnCambiarTelefono.setVisibility(View.GONE);
                         btnCambiarPais.setVisibility(View.GONE);
                         btnCambiarCiudad.setVisibility(View.GONE);
+                        btnCambiarEmail.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                if(Usuario.comprobarEmail(txtJocker.getText().toString())){
+
+
+
+                                        //CAMBIAR EMAIL EN LA BASE DE DATOS
+                                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                                        Query query = ref.child("usuarios").orderByChild("nombre").equalTo(nombre);
+
+                                        query.addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                if (snapshot.exists()) {
+                                                    for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                                                        String userID = userSnapshot.getKey();
+                                                        ref.child("usuarios").child(userID).child("email").setValue(txtJocker.getText().toString()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                            @Override
+                                                            public void onSuccess(Void aVoid) {
+                                                                Toast.makeText(getApplicationContext(), "Email cambiado correctamente", Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        }).addOnFailureListener(new OnFailureListener() {
+                                                            @Override
+                                                            public void onFailure(@NonNull Exception e) {
+                                                                Toast.makeText(getApplicationContext(), "Error al cambiar el Email", Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        });
+                                                    }
+                                                }
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+                                                Toast.makeText(getApplicationContext(), "Error al buscar el usuario", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+
+                                    }else {
+                                        Toast.makeText(getApplicationContext(), "El Email no tiene el formato correcto", Toast.LENGTH_SHORT).show();
+                                    }
+
+
+                            }
+                        });
                         break;
                     case 4:
                         // Código para país
+                        txtJocker.setText("");
                         txtJocker.setVisibility(View.VISIBLE);
                         txtJocker.setHint("Introduce el nuevo país");
                         btnCambiarPais.setVisibility(View.VISIBLE);
@@ -257,9 +308,54 @@ public class Cuenta extends AppCompatActivity {
                         btnCambiarTelefono.setVisibility(View.GONE);
                         btnCambiarEmail.setVisibility(View.GONE);
                         btnCambiarCiudad.setVisibility(View.GONE);
+                        btnCambiarPais.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                if(txtJocker.getText().toString() != ""){
+
+                                    //CAMBIAR PAÍS EN LA BASE DE DATOS
+                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                                    Query query = ref.child("usuarios").orderByChild("nombre").equalTo(nombre);
+
+                                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (snapshot.exists()) {
+                                                for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                                                    String userID = userSnapshot.getKey();
+                                                    ref.child("usuarios").child(userID).child("pais").setValue(txtJocker.getText().toString()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                                            Toast.makeText(getApplicationContext(), "País cambiado correctamente", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    }).addOnFailureListener(new OnFailureListener() {
+                                                        @Override
+                                                        public void onFailure(@NonNull Exception e) {
+                                                            Toast.makeText(getApplicationContext(), "Error al cambiar el país", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+                                            Toast.makeText(getApplicationContext(), "Error al buscar el usuario", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
+                                }else {
+                                    Toast.makeText(getApplicationContext(), "El campo no puede estar vacío", Toast.LENGTH_SHORT).show();
+                                }
+
+
+                            }
+                        });
                         break;
                     case 5:
                         // Código para ciudad
+                        txtJocker.setText("");
                         txtJocker.setVisibility(View.VISIBLE);
                         txtJocker.setHint("Introduce la nueva ciudad");
                         btnCambiarCiudad.setVisibility(View.VISIBLE);
@@ -268,9 +364,55 @@ public class Cuenta extends AppCompatActivity {
                         btnCambiarTelefono.setVisibility(View.GONE);
                         btnCambiarEmail.setVisibility(View.GONE);
                         btnCambiarPais.setVisibility(View.GONE);
+
+                        btnCambiarCiudad.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                if(txtJocker.getText().toString() != ""){
+
+
+
+                                    //CAMBIAR CIUDAD EN LA BASE DE DATOS
+                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                                    Query query = ref.child("usuarios").orderByChild("nombre").equalTo(nombre);
+
+                                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (snapshot.exists()) {
+                                                for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                                                    String userID = userSnapshot.getKey();
+                                                    ref.child("usuarios").child(userID).child("ciudad").setValue(txtJocker.getText().toString()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                                            Toast.makeText(getApplicationContext(), "Ciudad cambiada correctamente", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    }).addOnFailureListener(new OnFailureListener() {
+                                                        @Override
+                                                        public void onFailure(@NonNull Exception e) {
+                                                            Toast.makeText(getApplicationContext(), "Error al cambiar la ciudad", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+                                            Toast.makeText(getApplicationContext(), "Error al buscar el usuario", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
+                                }else {
+                                    Toast.makeText(getApplicationContext(), "El campo no puede estar vacío", Toast.LENGTH_SHORT).show();
+                                }
+
+
+                            }
+                        });
                         break;
-                    default:
-                        break;
+
                 }
             }
 

@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Contacto">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+
+    <TextView
+        android:id="@+id/tvDireccionYcontacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección y contacto:"
+        android:textSize="25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/verde_oliva"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/tvDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paraje el Horcajo s/n 10136 Cañamero (Cáceres)"
+        android:textSize="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/verde_oliva"
+        android:layout_marginTop="40dp" />
+
+    <LinearLayout
+        android:id="@+id/telefonoLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tlf"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvTlf1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="653673373"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/verde_oliva" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/telefonoLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tlf"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvTlf2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="927195316"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/verde_oliva"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/correoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/correo"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="info@turismoruralcandela.com"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/verde_oliva"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/instagramLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/instagram"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvInstagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="apartamentosruralescandela"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/verde_oliva" />
+
+    </LinearLayout>
+
+</LinearLayout>

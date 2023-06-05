@@ -13,7 +13,7 @@ import com.example.ruralcandelappf.adaptadores.ImagePagerAdapter;
 
 public class Restaurante extends AppCompatActivity {
 
-    private int[] imageIds = { R.drawable.restaurante1, R.drawable.restaurante2 };
+    private int[] imageIds = { R.drawable.crema, R.drawable.cenanoche, R.drawable.tronco1, R.drawable.ximenez, R.drawable.tomate, R.drawable.tartafruta, R.drawable.cochifrito, R.drawable.ventanarestaurante, R.drawable.restauranteregalos, R.drawable.restauranteblanconegro, R.drawable.tabule, R.drawable.solomillo, R.drawable.restaurante1 };
     public String nombre;
     public String apellido1;
     public String telefono;
@@ -37,7 +37,6 @@ public class Restaurante extends AppCompatActivity {
         btnReservar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (nombre != null && apellido1 != null && telefono != null) {
 
                     Intent intent = new Intent(Restaurante.this, com.example.ruralcandelappf.ReservarRestaurante.class);

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,54 +5,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/texacuarela"
+    android:background="@drawable/pergamino3"
     tools:context=".DejarResena">
-
-
-
 
     <EditText
         android:id="@+id/txtComentarioResena"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:hint="Cuéntanos tu experiencia aquí"
         android:padding="20dp"
         android:textColorHint="@color/black"
         android:gravity="top"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="40dp"
-        android:textStyle="italic"
-        />
+        android:layout_marginBottom="20dp"
+        android:textStyle="italic" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:progressTint="@color/teja13"
+        android:background="@drawable/pergamino3"
+        android:progressTint="@color/teal_200"
+        android:progressBackgroundTint="@color/white"
         android:layout_margin="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp"
         android:numStars="5"
         android:stepSize="1"
-        android:rating="0"/>
+        android:rating="0" />
 
-    <Button
-        android:id="@+id/btnConfirmarResena"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirmar"
-        android:backgroundTint="@color/black"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:layout_margin="16dp"
-        />
+        android:gravity="center"
+        android:layout_marginTop="100dp">
 
+        <Button
+            android:id="@+id/btnConfirmarResena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar reseña"
+            android:layout_margin="16dp"
+            android:background="@drawable/btn_sin_borde" />
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -66,6 +66,12 @@ public class ResenaAdapter extends RecyclerView.Adapter<ResenaAdapter.ReviewView
             ratingBar.setIsIndicator(true);
             ratingBar.setRating(review.getValoracion());
             btnDejarResena.setVisibility(View.GONE);
+            //hacer invisible el background del layout
+            itemView.setBackgroundResource(0);
+
+
+
+
 
         }
     }

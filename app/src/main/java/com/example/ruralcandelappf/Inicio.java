@@ -84,6 +84,18 @@ public class Inicio extends AppCompatActivity {
             }
         });
 
+        btnContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Inicio.this, Contacto.class);
+                intent.putExtra("nombre", nombre);
+                intent.putExtra("apellido1", apellido1);
+                intent.putExtra("telefono", telefono);
+                startActivity(intent);
+
+            }
+        });
+
         btnCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
